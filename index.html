@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiesta de Colores</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="container text-center vh-100 d-flex flex-column justify-content-center align-items-center">
+    <h1 id="title" class="display-4 fw-bold mb-4">¡Bienvenido a la Fiesta de Colores! 🎉</h1>
+    <p id="popular-color" class="fs-4 text-secondary mb-4">Haz clic en un color para empezar</p>
+
+    <div id="dance-floor" class="d-flex flex-wrap gap-3 justify-content-center mb-4">
+      <button class="color-btn btn btn-danger rounded-circle" data-color="red"></button>
+      <button class="color-btn btn btn-primary rounded-circle" data-color="blue"></button>
+      <button class="color-btn btn btn-warning rounded-circle" data-color="yellow"></button>
+      <button class="color-btn btn btn-success rounded-circle" data-color="green"></button>
+    </div>
+
+    <div class="mb-4">
+      <button id="add-color" class="btn btn-outline-primary me-2">Agregar un color sorpresa</button>
+      <button id="reset" class="btn btn-outline-secondary">Reiniciar la fiesta</button>
+    </div>
+
+    <p id="timer" class="fs-5 text-muted">Tiempo restante: 10s</p>
+
+    <button id="show-panel-btn" class="btn btn-info mt-3">Top 5 Colores</button>
+
+    <div id="top-colors-panel" class="panel d-none position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-flex justify-content-center align-items-center">
+      <div class="panel-content bg-white p-4 rounded shadow-lg text-center">
+        <h2 class="h4 fw-bold mb-3">Top 5 Colores</h2>
+        <ul id="top-colors-list" class="list-unstyled text-muted">
+          <!-- Lista dinámica de los colores más populares -->
+        </ul>
+        <button id="close-panel-btn" class="btn btn-danger mt-3">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/script.js" defer></script>
+  <script src="/js/sounds.js" defer></script>
+</body>
+</html>
